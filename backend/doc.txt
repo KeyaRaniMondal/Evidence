@@ -1,0 +1,3 @@
+while running  python -m uvicorn main:app --reload   getting errors like "D:\Lib\multiprocessing\process.py", line 320, in _bootstrap
+    self.run()
+    ~~~~~~~~^^        so took help from opencode
