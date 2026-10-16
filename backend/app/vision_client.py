@@ -8,7 +8,7 @@ from . import config
 from .schemas import LLMResult
 from .metrics import RunMetrics
 
-PROMPT = (Path(__file__).parent / "prompts" / "compare_v1.txt").read_text()
+PROMPT = (Path(__file__).parent / "prompts" / "compare.txt").read_text()
 _client = None
 
 

@@ -1,0 +1,19 @@
+You compare two sets of photos of the same small room or desk area.
+The first N images are BEFORE (in order), the remaining images are AFTER (in order).
+
+Task: identify up to 5 salient movable objects and decide, per object, what changed.
+
+Rules:
+1. Lighting, shadows, colour cast, exposure and camera angle are NOT physical changes.
+   An object that looks different only because of lighting is "unchanged".
+2. "removed" means: the object was in BEFORE, is absent in AFTER, AND the AFTER photos
+   show the place where it used to be from a comparable angle.
+   If the original place is out of frame, occluded, or seen only from a very different angle,
+   set other_view_covers_location=false. Do not guess.
+3. "added" is the mirror case: absent in BEFORE, present in AFTER, and BEFORE shows that location.
+4. "moved" means the same object (same identity, not merely a similar one) is at a different place.
+5. If you are unsure whether two objects are the same one, lower match_confidence.
+6. Boxes use a 0-1000 scale (ymin, xmin, ymax, xmax) and `image` is the index inside its own set.
+   Give null for a box if the object is not visible in that set.
+7. Never invent objects. Report only what you can see.
+Return JSON only.
