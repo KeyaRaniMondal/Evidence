@@ -15,7 +15,7 @@ from .pipeline.run import analyze_sets
 from .schemas import Report
 
 app = FastAPI(title="room-diff")
-app.add_middleware(CORSMiddleware, allow_origins=["https://evidence-emls.onrender.com","http://localhost:3000", "http://127.0.0.1:3000"],
+app.add_middleware(CORSMiddleware, allow_origins=["https://evidence-1-jmzn.onrender.com","http://localhost:3000", "http://127.0.0.1:3000"],
                    allow_methods=["*"], allow_headers=["*"])
 
 
